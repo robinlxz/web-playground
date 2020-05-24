@@ -11,7 +11,8 @@
 
 <script>
 import BlogCard from '@/components/BlogCard.vue'
-import BlogService from '@/services/BlogService.js'
+// import BlogService from '@/services/BlogService.js'
+import { mapState } from 'vuex'
 
 export default {
   name: 'BlogHomepage',
@@ -20,19 +21,14 @@ export default {
   },
   data() {
     return {
-      dishes: [],
-      blogs: []
+      dishes: []
     }
   },
   created() {
-    BlogService.getBlogs()
-      .then(response => {
-        // console.log(response.data)
-        this.blogs = response.data
-      })
-      .catch(error => {
-        console.log('Error in getDishes API call:', error.response)
-      })
+    this.$store.dispatch('fetchAllBlogs')
+  },
+  computed: {
+    ...mapState(['blogs'])
   }
 }
 </script>
