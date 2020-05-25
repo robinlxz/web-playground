@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import BlogShow from '@/views/Blog/BlowShow.vue'
+import LiushengShow from '@/views/LiuSheng/LiuShengShow.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,20 @@ const routes = [
     path: '/blog/:id',
     name: 'BlogShow',
     component: BlogShow,
+    props: true
+  },
+  {
+    path: '/liusheng',
+    name: 'LiuSheng',
+    component: () =>
+      import(
+        /* webpackChunkName: "Blog" */ '../views/LiuSheng/LiuShengHomepage.vue'
+      )
+  },
+  {
+    path: '/liusheng/:id',
+    name: 'LiuShengShow',
+    component: LiushengShow,
     props: true
   }
 ]

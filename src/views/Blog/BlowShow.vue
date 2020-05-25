@@ -1,5 +1,6 @@
 <template>
   <div class="show">
+    <RootNav />
     <h1>{{ blogObject.title }}</h1>
     <pre><p v-if="blogObject.content">{{ formattedContent }}</p></pre>
   </div>
@@ -7,9 +8,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import RootNav from '@/components/RootNav.vue'
 
 export default {
   name: 'BlogShow',
+  components: {
+    RootNav
+  },
   data() {
     return {
       // blogObject: {}

@@ -1,5 +1,6 @@
 <template>
   <div class="blog">
+    <RootNav />
     <h1 class="page-title">This is Blog Homepage@vue-playground</h1>
     <div class="blog-list">
       <div v-for="(blog, index) in blogs" :key="index">
@@ -13,11 +14,13 @@
 import BlogCard from '@/components/BlogCard.vue'
 // import BlogService from '@/services/BlogService.js'
 import { mapState } from 'vuex'
+import RootNav from '@/components/RootNav.vue'
 
 export default {
   name: 'BlogHomepage',
   components: {
-    BlogCard
+    BlogCard,
+    RootNav
   },
   data() {
     return {
@@ -37,7 +40,8 @@ export default {
 .blog {
   .page-title {
     text-align: center;
-    margin: 2rem 0 4rem 0;
+    margin: 1rem 0 2rem 0;
+    font-size: 1rem;
   }
 
   .blog-list {
