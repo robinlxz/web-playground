@@ -42,6 +42,7 @@ export default {
   padding: 2rem;
   transition: all 0.2s linear;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     transform: scale(1.01);
