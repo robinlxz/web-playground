@@ -46,6 +46,12 @@ const routes = [
     name: 'LiuShengShow',
     component: LiushengShow,
     props: true
+  },
+  {
+    path: '/singhey',
+    name: 'SingHey',
+    component: () =>
+      import(/* webpackChunkName: "Blog" */ '@/views/SingHey/SingHomepage.vue')
   }
 ]
 
