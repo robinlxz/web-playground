@@ -16,8 +16,9 @@
       <!-- <p>SingHey focus on cellphone version first</p> -->
       <!-- <h4>Banner with sliding pictures</h4> -->
     </div>
-    <br />
-    <SingMenu />
+    <div class="content">
+      <SingMenu />
+    </div>
   </div>
 </template>
 
@@ -73,6 +74,10 @@ export default {
       font-size: 50%;
       font-weight: 600;
     }
+  }
+
+  .content {
+    background-color: #999;
   }
 }
 </style>
