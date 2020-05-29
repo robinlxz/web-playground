@@ -11,83 +11,32 @@
       <i class="fas fa-shopping-cart"></i>
     </div>
     <ServiceInfoCollection />
+    <!-- <SingCarousel /> -->
     <div class="banner">
       <!-- <p>SingHey focus on cellphone version first</p> -->
       <!-- <h4>Banner with sliding pictures</h4> -->
     </div>
     <br />
-    <div class="content">
-      <div class="singhey-menu">
-        <!-- container valign-wrapper -->
-        <p>Here to add components for menu</p>
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image">
-                <img src="@/assets/singhey/food1.jpg" />
-                <span class="card-title">Signature Scrambled Egg With Pork Chop</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                  <i class="material-icons">+</i>
-                </a>
-              </div>
-              <div class="card-content">
-                <p>Cuisine introduction</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-image">
-                <img src="@/assets/singhey/food2.jpg" />
-                <span class="card-title">Salted Baked Chicken Rice</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                  <i class="material-icons">+</i>
-                </a>
-              </div>
-              <div class="card-content">
-                <p>Cuisine introduction</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <SingMenu />
   </div>
 </template>
 
 <script>
 import ServiceInfoCollection from './ServiceInfoCollection.vue'
+// import SingCarousel from './SingCarousel.vue'
+import SingMenu from './SingMenu.vue'
 
 export default {
   name: 'SingHomepage',
   components: {
-    // Datepicker,
-    ServiceInfoCollection
+    ServiceInfoCollection,
+    // SingCarousel,
+    SingMenu
   },
   data() {
-    // const times = []
-    // for (let i = 1; i <= 24; i++) {
-    //   times.push(i + ':00')
-    // }
-    return {
-      // times,
-      // serviceActive: 'pickup',
-      // pickup: {
-      //   date: '',
-      //   time: ''
-      // }
-    }
+    return {}
   },
-  methods: {
-    // activatePickup() {
-    //   this.serviceActive = 'pickup'
-    // },
-    // activateDelivery() {
-    //   this.serviceActive = 'delivery'
-    // }
-  },
+  methods: {},
   mounted() {
     let fontAwesomeScript = document.createElement('script')
     fontAwesomeScript.setAttribute(
@@ -123,20 +72,6 @@ export default {
       color: #000;
       font-size: 50%;
       font-weight: 600;
-    }
-  }
-
-  .content {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // height: 70vh;
-    background-color: #999;
-
-    .singhey-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
   }
 }
