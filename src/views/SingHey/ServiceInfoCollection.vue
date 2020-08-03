@@ -12,12 +12,6 @@
       <div :class="{'display-none': serviceActive != 'pickup'}">
         <!-- <h4>pickup-info</h4> -->
         <datepicker v-model="pickup.date" placeholder="Select a date" />
-        <!-- <h5>Other pickup needed information to be added</h5> -->
-        <!-- <label>Select a time</label>
-        <select v-model="pickup.time">
-          <option v-for="time in times" :key="time">{{ time }}</option>
-        </select>
-        <h2>Where is my option?</h2>-->
       </div>
       <div :class="{'display-none': serviceActive != 'delivery'}">
         <!-- <h4>delivery-info</h4> -->
