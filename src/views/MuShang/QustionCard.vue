@@ -35,7 +35,8 @@ export default {
 
 .blog-card {
   // border: 2px solid;
-  width: 25rem;
+  width: 60%;
+  // width: min(40%, 400px);
   // height: 6rem;
   margin-bottom: 2rem;
   padding: 2rem;
