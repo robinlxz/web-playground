@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import BlogShow from '@/views/Blog/BlowShow.vue'
 import LiushengShow from '@/views/LiuSheng/LiuShengShow.vue'
+import QuestionShow from '@/views/MuShang/QuestionShow.vue'
 
 Vue.use(VueRouter)
 
@@ -55,12 +56,18 @@ const routes = [
   },
   {
     path: '/mushang',
-    name: 'MuShang',
+    name: 'MuShangHomepage',
     component: () =>
       import(
         /* webpackChunkName: "Blog" */ '../views/MuShang/MuShangHomepage.vue'
       )
-  }
+  },
+  {
+    path: '/mushang/:id',
+    name: 'QuestionShow',
+    component: QuestionShow,
+    props: true
+  },
 ]
 
 const router = new VueRouter({
